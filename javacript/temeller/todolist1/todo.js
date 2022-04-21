@@ -25,6 +25,7 @@ function todoekle(e)
 
 
     const newtodo=inputTodo.value.trim();
+    
     todoeklendi(newtodo);
 
     console.log(inputTodo.value);
@@ -35,13 +36,7 @@ function todoekle(e)
 
 function todoeklendi(newtodo)
 {
-    /* <li class="list-group-item d-flex justify-content-between">
-    Todo 1
-    <a href = "#" class ="">
-        <i class = "fa fa-remove"></i>
-    </a>
-
-</li>*/
+   
     const yenielement=document.createElement("li");
     yenielement.className="list-group-item d-flex justify-content-between";
     const ay=document.createElement("a");
@@ -50,17 +45,18 @@ function todoeklendi(newtodo)
     ay.innerHTML="<i class = 'fa fa-remove'></i>";
 
     yenielement.appendChild(document.createTextNode(newtodo));
-  yenielement.appendChild(ay);
+  
+    yenielement.appendChild(ay);
 
   
-    //let textnod= document.createTextNode("");
+   
   
     
-    //ay.appendChild(textnod);
+    
     
     listGroup.appendChild(yenielement);
   
-    //listGroup.appendChild(newtodo);
+   
 
 
 
