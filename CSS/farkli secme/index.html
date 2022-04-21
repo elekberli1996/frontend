@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+   p::first-letter{
+        color: rgb(223, 43, 208);
+    }
+    p::first-line{background-color: rgb(236, 181, 28);}
+    P::after{
+        content: "naaaber";
+        background-color: rgb(98, 0, 255);
+    }
+    
+    a:link{
+        color: rgb(30, 210, 210);
+    }
+    a:hover{
+        color: rgb(128, 0, 0);
+    }
+    a:active{
+        color: rgb(39, 150, 103);
+    }
+
+    a:visited{
+        color: black;
+    }
+img [title="bir"]{
+   
+    border:10px solid black;
+basliq bir olan}  
+
+p[title^="bu"]{
+   background-color: red;
+basinda bu gecenler
+sonda gecen $=
+her hangi bi yerde tilda isaresi=}
+
+</style>
+<body>
+    <p> kaaan  <br> academy  pseudo element pseudo </p>
+
+        <a href="https://www.gogle.com"> googla git</a>
+        <img src="img/1.jpg" width="50%" title="bir" alt="">
+        <img src="img/2.jpg" width="50%" alt="">
+        <img src="img/3.jpg" width="50%" alt="">
+
+        <p title="bu bir baslikdir">bu bir paragrafdir</p>
+        <p title="bu bir baslik deil"> bu bir paragraf deil</p>
+        <p title="bir baslik">bir paragraf</p>
+
+
+
+</body>
+</html>

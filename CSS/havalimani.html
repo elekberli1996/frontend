@@ -1,0 +1,726 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Naxçıvan Beynəlxalq Hava Limanı</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="DreamArt.az">
+    <link href="index2.css" rel="stylesheet" type="text/css">
+    <link href="./jscripts/jquery/jquery-ui.custom.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./jscripts/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="./jscripts/jquery/jquery-ui.custom.min.js"></script>
+    <script type="text/javascript" src="./jscripts/jquery/i18n/jquery.ui.datepicker-az.js"></script>
+    <script type="text/javascript" src="./jscripts/jquery.cycle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--[if IE 7]>
+<style>
+#searchdivabs h2{
+	margin-top:5px;
+}
+</style>
+<![endif]-->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#menu li').bind('mouseenter', function () {
+                $t = true;
+                $(this).find('div:first').stop(true, true).show();
+            }).bind('mouseleave', function () {
+                $t = false;
+                $(this).find('div:first').stop(true, true).hide();
+            });
+            $('#searcha').click(function () {
+                //alert(111);
+                if ($('#forsearch').val() != '' && $('#forsearch').val() != '') {
+                    $(this).parent().attr('action', '?/az/search/' + $('#forsearch').val() + '/')
+                        .submit();
+                }
+                return false;
+            });
+            $('#forsearch').focusin(function () {
+                if ($(this).val() == '')
+                    $(this).val('');
+            }).focusout(function () {
+                if ($('#forsearch').val() == '')
+                    $(this).val('');
+            });
+            $('#mainbanner').cycle({ //mainbannerpages
+                fx: 'fade',
+                pager: '#mainbannerpages',
+                pagerAnchorBuilder: function (idx, slide) {
+                    return '<a href="#"><span>' + idx + '</span></a>';
+                }
+            });
+            $("#formsubmitter").click(function () {
+                $("#biletsifarishi_form").submit();
+            })
+            _next = -1;
+            var aaa = setTimeout(rotatePoster, 3000);
+            $forcycle = $("div.forcycle");
+
+            function rotatePoster() {
+                clearTimeout(aaa);
+                _next++;
+                if (_next >= $forcycle.length) _next = 0;
+                $("div.forcycle").removeClass("on").eq(_next).addClass("on");
+                aaa = setTimeout(rotatePoster, 3000);
+            }
+            $("input.datepicker").datepicker({
+                dateFormat: 'dd/mm/yy'
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <div class="menfi">
+        <h1>XƏBƏRLƏR :: Naxçıvan Beynəlxalq Hava Limanı</h1>
+    </div>
+    <div id="wrapper">
+        <!-- header -->
+        <div id="header">
+            <!-- menudiv -->
+            <div id="menudiv">
+                <div class="wrapper">
+                    <ul id="langense">
+                        <li><a href="?/az/"><img src="./images/aaa.png" alt="Az"></a></li>
+                        <li><a href="?/az/"><img src="./images/az.png" alt="Az"></a></li>
+                        <li><a href="?/en/"><img src="./images/en.png" alt="En"></a></li>
+                        <li><a href="?/ru/"><img src="./images/ru.png" alt="Ru"></a></li>
+                    </ul>
+                    <!-- menu -->
+                    <ul id="menu">
+                        <li><a href="#null">İnformasiyanın istifadə olunması qaydaları</a>
+                        </li>
+                        <li><a href="#null">Haqqımızda</a>
+                            <div style="display: none;">
+                                <ul>
+                                    <li><a href="?/az/page/157/Umumi_melumat">Ümumi məlumat</a></li>
+                                    <li><a href="?/az/page/156/Tarix">Tarix</a></li>
+                                    <li><a href="?/az/page/155/Inkishaf_perspektivleri">Inkişaf perspektivləri</a></li>
+                                    <li><a href="?/az/page/171/Texniki_məlumatlar">Texniki məlumatlar</a></li>
+                                    <li><a href="?/az/page/153/Uchushlarin_tehlukesizliyi">Uçuşların təhlükəsizliyi</a>
+                                    </li>
+                                    <li><a href="?/az/page/152/Sertifikatlar">Sertifikatlar</a></li>
+                                    <li><a href="?/az/page/151/Hava_limaninin_sxemi">Hava limanının sxemi</a></li>
+                                    <li><a href="?/az/page/aaaaa/">Fotoqalereya</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#null">Sərnişinlər üçün</a>
+                            <div style="display: none;">
+                                <ul>
+                                    <li><a href="?/az/page/129/Umumi_melumat">Ümumi məlumat</a></li>
+                                    <li><a href="?/az/page/92/Uchush_cedveli">Uçuş cədvəli</a></li>
+                                    <li><a href="?/az/page/93/Bilet_shatish_noqteleri">Bilet şatış nöqtələri</a></li>
+                                    <li><a href="?/az/page/139/Uchushqabagi qeydiyyat">Qaydalar</a></li>
+                                    <li><a href="?/az/page/140/Elil sernishinler">Daşınmaların xüsusi halları</a></li>
+                                    <li><a href="?/az/page/149/Restoranlar/ Kafeler">Xidmətlər</a></li>
+                                    <li><a href="?/az/page/98/VIP_xidmetler">VİP xidmətlər</a></li>
+                                    <li><a href="?/az/page/130/CIP_xidmetler">CİP xidmətlər</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#null">Yük daşımaları</a>
+                            <div>
+                                <ul>
+                                    <li><a href="?/az/page/124/Umumi_melumat">Ümumi məlumat</a></li>
+                                    <li><a href="?/az/page/122/Elaqe_melumati">Əlaqə məlumatı</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#null">Xidmətlər</a>
+                            <div style="display: none;">
+                                <ul>
+                                    <li><a href="?/az/page/170/Mehmanxanalar">Mehmanxanalar</a></li>
+                                    <li><a href="?/az/page/169/Pullu_dayanacaq">Pullu dayanacaq</a></li>
+                                    <li><a href="?/az/page/168/Taksi">Taksi</a></li>
+                                    <li><a href="?/az/page/167/Ictimai_neqliyyat">İctimai nəqliyyat</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#null">Naxçıvan haqqında</a>
+                            <div>
+                                <ul>
+                                    <li><a href="?/az/page/117/Umumi_melumat">Ümumi məlumat</a></li>
+                                    <li><a href="?/az/page/historical_monuments/">Tarixi abidələr</a></li>
+                                    <li><a href="?/az/page/nakhchivan/">Fotoqalereya</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="last"><a href="#null">Əlaqə məlumatları</a>
+                            <div style="display: none;">
+                                <ul>
+                                    <li><a href="?/az/page/177/Telefon/Faks">Telefon/Faks</a></li>
+                                    <li><a href="?/az/page/176/Elektron_pocht">Elektron poçt</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- end menu -->
+                </div>
+            </div>
+            <!-- end menudiv -->
+            <div id="head">
+                <div id="innerhead">
+                    <div class="wrapper">
+                        <a id="logo" href="http://www.airportnakhchivan.com/"><img src="./images/logo.png" alt="Ru"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end header -->
+        <!-- center -->
+        <div id="center">
+            <div id="centerbg">
+                <div id="centerbg2">
+                    <div class="wrapper">
+                        <!-- rightpart -->
+                        <div id="rightpart">
+                            <!-- biletsifarishi -->
+                            <form method="post" action="https://booking.sita.aero/asp/asp/azal" target="_blank"
+                                id="biletsifarishi_form">
+                                <input value="itd.presentation.handler.page.air.PresAirSimpleReqsPageHandler"
+                                    name="requestor" type="hidden">
+                                <input value="Axtar"
+                                    name="_handler=itd.presentation.handler.request.air.PresAirSearchRequestHandler/_xpath=/sessionWorkflow/productWorkflow[@product='Air']"
+                                    type="hidden">
+                                <div id="biletsifarishi">
+                                    <h2>BİLET ALIŞI</h2>
+                                    <table width="360">
+                                        <tbody>
+                                            <tr>
+                                                <td width="58">Haradan</td>
+                                                <td colspan="3" width="178">
+                                                    <select
+                                                        name="/sessionWorkflow/productWorkflow[@product='Air']/travelSelection/journeySelection[1]/departLocation/selected"
+                                                        class="input" style="width:150px">
+                                                        <option value="Airport.SCO">SCO - Aktau, Qazaxıstan</option>
+                                                        <option value="Airport.ESB">ESB - Ankara - Esenboğa, Türkiyə
+                                                        </option>
+                                                        <option value="Airport.GYD">GYD - Bakı - Heydər Əliyev,
+                                                            Azərbaycan</option>
+
+                                                        <option value="Airport.DXB">DXB - Dubay, Birləşmiş Ərəb
+                                                            Əmirlikləri</option>
+                                                        <option value="Airport.FRA">FRA - Frankfurt Beynəlxalq hava
+                                                            limanı, Almaniya</option>
+                                                        <option value="Airport.KVD">KVD - Gəncə, Azərbaycan</option>
+                                                        <option value="Airport.IST">IST - İstanbul, Türkiyə</option>
+                                                        <option value="Airport.KBP">KBP - Kiyev - Borispol, Ukrayna
+                                                        </option>
+                                                        <option value="Airport.LHR">LHR - London - Heathrow, Böyük
+                                                            Britaniya</option>
+
+                                                        <option value="Airport.MXP">MXP - Milan - Malpensa, İtaliya
+                                                        </option>
+                                                        <option value="Airport.DME">DME - Moskva - Domodedovo, Rusiya
+                                                        </option>
+                                                        <option value="Airport.CDG">CDG - Paris - Charles De Gaulle,
+                                                            Fransa</option>
+                                                        <option value="Airport.PRG">PRG - Praqa, Çex Respublikası
+                                                        </option>
+                                                        <option value="Airport.ROV">ROV - Rostov, Rusiya</option>
+                                                        <option value="Airport.LED">LED - Sankt-Peterburq, Rusiya
+                                                        </option>
+
+                                                        <option value="Airport.TBS">TBS - Tbilisi, Gürcüstan</option>
+                                                        <option value="Airport.IKA">IKA - Tehran - İmam Xomeyni
+                                                            Beynəlxalq hava limanı, İran</option>
+                                                        <option value="Airport.TLV">TLV - Tel Əviv - Ben Qurion, İsrail
+                                                        </option>
+                                                        <option value="Airport.URC">URC - Urumqi, Çin</option>
+                                                        <option value="Airport.VIE">VIE - Vyana, Avstriya</option>
+                                                    </select>
+                                                </td>
+                                                <td>Klass</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hara</td>
+                                                <td colspan="3">
+                                                    <select
+                                                        name="/sessionWorkflow/productWorkflow[@product='Air']/travelSelection/journeySelection[1]/arriveLocation/selected"
+                                                        class="input" style="width:150px">
+                                                        <option value="Airport.SCO">SCO - Aktau, Qazaxıstan</option>
+                                                        <option value="Airport.ESB">ESB - Ankara - Esenboğa, Türkiyə
+                                                        </option>
+                                                        <option value="Airport.GYD">GYD - Bakı - Heydər Əliyev,
+                                                            Azərbaycan</option>
+
+                                                        <option value="Airport.DXB">DXB - Dubay, Birləşmiş Ərəb
+                                                            Əmirlikləri</option>
+                                                        <option value="Airport.FRA">FRA - Frankfurt Beynəlxalq hava
+                                                            limanı, Almaniya</option>
+                                                        <option value="Airport.KVD">KVD - Gəncə, Azərbaycan</option>
+                                                        <option value="Airport.IST">IST - İstanbul, Türkiyə</option>
+                                                        <option value="Airport.KBP">KBP - Kiyev - Borispol, Ukrayna
+                                                        </option>
+                                                        <option value="Airport.LHR">LHR - London - Heathrow, Böyük
+                                                            Britaniya</option>
+
+                                                        <option value="Airport.MXP">MXP - Milan - Malpensa, İtaliya
+                                                        </option>
+                                                        <option value="Airport.DME">DME - Moskva - Domodedovo, Rusiya
+                                                        </option>
+                                                        <option value="Airport.CDG">CDG - Paris - Charles De Gaulle,
+                                                            Fransa</option>
+                                                        <option value="Airport.PRG">PRG - Praqa, Çex Respublikası
+                                                        </option>
+                                                        <option value="Airport.ROV">ROV - Rostov, Rusiya</option>
+                                                        <option value="Airport.LED">LED - Sankt-Peterburq, Rusiya
+                                                        </option>
+
+                                                        <option value="Airport.TBS">TBS - Tbilisi, Gürcüstan</option>
+                                                        <option value="Airport.IKA">IKA - Tehran - İmam Xomeyni
+                                                            Beynəlxalq hava limanı, İran</option>
+                                                        <option value="Airport.TLV">TLV - Tel Əviv - Ben Qurion, İsrail
+                                                        </option>
+                                                        <option value="Airport.URC">URC - Urumqi, Çin</option>
+                                                        <option value="Airport.VIE">VIE - Vyana, Avstriya</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select
+                                                        name="/sessionWorkflow/productWorkflow[@product='Air']/tripRequirements/allJourneyRequirements/serviceFareClassType"
+                                                        class="input">
+                                                        <option selected="selected" value="Economy">Ekonom</option>
+                                                        <option value="Business">Biznes</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label><input type="radio" checked="checked" value="OneWay"
+                                                            name="/sessionWorkflow/productWorkflow[@product='Air']/tripRequirements/tripType">gediş</label>
+                                                </td>
+                                                <td colspan="2">
+                                                    <label><input type="radio" value="Return"
+                                                            name="/sessionWorkflow/productWorkflow[@product='Air']/tripRequirements/tripType">gediş-dönüş</label>
+                                                </td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Oraya</td>
+                                                <td colspan="2">
+                                                    <input type="text"
+                                                        name="/sessionWorkflow/productWorkflow[@product='Air']/tripRequirements/journeyRequirements[1]/departDate.eudate"
+                                                        class="datepicker input inp87 hasDatepicker"
+                                                        id="dp1649273098933">
+                                                    <select class="in_time"
+                                                        name="/sessionWorkflow/productWorkflow[@product='Air']/tripRequirements/journeyRequirements[1]/departTime.hourmin"
+                                                        id="wdftime1">
+                                                        <option value=""></option>
+                                                        <option selected="selected" value="00:00">00:00</option>
+                                                        <option value="01:00">01:00</option>
+
+                                                        <option value="02:00">02:00</option>
+                                                        <option value="03:00">03:00</option>
+                                                        <option value="04:00">04:00</option>
+                                                        <option value="05:00">05:00</option>
+                                                        <option value="06:00">06:00</option>
+                                                        <option value="07:00">07:00</option>
+
+                                                        <option value="08:00">08:00</option>
+                                                        <option value="09:00">09:00</option>
+                                                        <option value="10:00">10:00</option>
+                                                        <option value="11:00">11:00</option>
+                                                        <option value="12:00">12:00</option>
+                                                        <option value="13:00">13:00</option>
+
+                                                        <option value="14:00">14:00</option>
+                                                        <option value="15:00">15:00</option>
+                                                        <option value="16:00">16:00</option>
+                                                        <option value="17:00">17:00</option>
+                                                        <option value="18:00">18:00</option>
+                                                        <option value="19:00">19:00</option>
+
+                                                        <option value="20:00">20:00</option>
+                                                        <option value="21:00">21:00</option>
+                                                        <option value="22:00">22:00</option>
+                                                        <option value="23:00">23:00</option>
+                                                        <option value="06:01">Səhər erkən</option>
+                                                        <option value="09:01">Səhər</option>
+
+                                                        <option value="12:01">Lunchtime</option>
+                                                        <option value="15:01">Günorta</option>
+                                                        <option value="18:01">Axşam erkən</option>
+                                                        <option value="21:01">Gecə</option>
+                                                    </select>
+                                                </td>
+                                                <td>Geriyə</td>
+                                                <td>
+                                                    <input type="text"
+                                                        name="/sessionWorkflow/productWorkflow[@product='Air']/tripRequirements/journeyRequirements[2]/departDate.eudate"
+                                                        class="datepicker input inp87 hasDatepicker"
+                                                        id="dp1649273098934">
+                                                    <select class="in_time"
+                                                        name="/sessionWorkflow/productWorkflow[@product='Air']/tripRequirements/journeyRequirements[2]/departTime.hourmin"
+                                                        id="wdftime2">
+                                                        <option value=""></option>
+                                                        <option selected="selected" value="00:00">00:00</option>
+                                                        <option value="01:00">01:00</option>
+
+                                                        <option value="02:00">02:00</option>
+                                                        <option value="03:00">03:00</option>
+                                                        <option value="04:00">04:00</option>
+                                                        <option value="05:00">05:00</option>
+                                                        <option value="06:00">06:00</option>
+                                                        <option value="07:00">07:00</option>
+
+                                                        <option value="08:00">08:00</option>
+                                                        <option value="09:00">09:00</option>
+                                                        <option value="10:00">10:00</option>
+                                                        <option value="11:00">11:00</option>
+                                                        <option value="12:00">12:00</option>
+                                                        <option value="13:00">13:00</option>
+
+                                                        <option value="14:00">14:00</option>
+                                                        <option value="15:00">15:00</option>
+                                                        <option value="16:00">16:00</option>
+                                                        <option value="17:00">17:00</option>
+                                                        <option value="18:00">18:00</option>
+                                                        <option value="19:00">19:00</option>
+
+                                                        <option value="20:00">20:00</option>
+                                                        <option value="21:00">21:00</option>
+                                                        <option value="22:00">22:00</option>
+                                                        <option value="23:00">23:00</option>
+                                                        <option value="06:01">Səhər erkən</option>
+                                                        <option value="09:01">Səhər</option>
+
+                                                        <option value="12:01">Lunchtime</option>
+                                                        <option value="15:01">Günorta</option>
+                                                        <option value="18:01">Axşam erkən</option>
+                                                        <option value="21:01">Gecə</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">Böyüklər (&gt;12 yaş)</td>
+                                                <td colspan="2">Uşaqlar (2-11 yaş)</td>
+                                                <td>Körpələr (&lt;2)</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <select
+                                                        name="/sessionWorkflow/productWorkflow[@product='Air']/tripRequirements/allJourneyRequirements/numberOfTravellers[@key='Adult']"
+                                                        class="input">
+                                                        <option selected="selected" value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </td>
+                                                <td colspan="2">
+                                                    <select
+                                                        name="/sessionWorkflow/productWorkflow[@product='Air']/tripRequirements/allJourneyRequirements/numberOfTravellers[@key='Child']"
+                                                        class="input">
+                                                        <option selected="selected" value="0">0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select
+                                                        name="/sessionWorkflow/productWorkflow[@product='Air']/tripRequirements/allJourneyRequirements/numberOfTravellers[@key='Infant']"
+                                                        class="input">
+                                                        <option selected="selected" value="0">0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <a href="#" id="formsubmitter"><img src="./images/formsubmit.jpg" alt=""></a>
+                                </div>
+                            </form>
+                            <!-- end biletsifarishi -->
+                            <!-- sernishinlere -->
+                            <div id="sernishinlere">
+                                <div class="hava">
+                                    <div class="forcycle" style="background:url('./images/hava37850.png')">
+                                        <h2>HAVA</h2>
+                                        <h3>Bakı</h3>
+                                        <div>
+                                            <img src="./weather/naxchivan_icons/mist.png" alt=""><br> 9..11°C
+                                        </div>
+                                    </div>
+                                    <div class="forcycle on" style="background:url('./images/hava37935.png')">
+                                        <h2>HAVA</h2>
+                                        <h3>Naxçıvan</h3>
+                                        <div>
+                                            <img src="./weather/naxchivan_icons/mist.png" alt=""><br> 13..15°C
+                                        </div>
+                                    </div>
+                                    <div class="forcycle" style="background:url('./images/hava37985.png')">
+                                        <h2>HAVA</h2>
+                                        <h3>Lənkəran</h3>
+                                        <div>
+                                            <img src="./weather/naxchivan_icons/mist.png" alt=""><br> 10..12°C
+                                        </div>
+                                    </div>
+                                    <div class="forcycle" style="background:url('./images/hava37735.png')">
+                                        <h2>HAVA</h2>
+                                        <h3>Gəncə</h3>
+                                        <div>
+                                            <img src="./weather/naxchivan_icons/mist.png" alt=""><br> 10..12°C
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2>SƏRNİŞİNLƏRƏ</h2>
+                                <ul>
+                                    <li>&gt; <a href="?/az/page/129/Umumi_melumat">Ümumi məlumat</a></li>
+                                    <li>&gt; <a href="?/az/page/139/Qaydalar">Qaydalar</a></li>
+                                    <li>&gt; <a href="?/az/page/140/Elil sernishinler">Daşınmaların xüsusi halları</a>
+                                    </li>
+                                    <li>&gt; <a href="?/az/page/149/Restoranlar/ Restoranlar/ Kafelər">Xidmətlər</a>
+                                    </li>
+                                    <li>&gt; <a href="?/az/page/98/VIP xidmetler">VİP xidmətlər</a></li>
+                                    <li class="last">&gt; <a href="?/az/page/130/CIP xidmetler">CİP xidmətlər</a></li>
+                                </ul>
+                            </div>
+                            <!-- end sernishinlere -->
+                            <!-- nakhcevan -->
+                            <div id="nakhcevan">
+                                <div class="absolute">
+                                    <div id="nakhcevan_content">
+                                        <h2 class="main"><span>Naxçıvana xoş gəlmişsiniz</span></h2>
+                                        <ul>
+                                            <li>&gt; <a href="?/az/page/117/Ümumi məlumat">Ümumi məlumat</a></li>
+                                            <li>&gt; <a href="?/az/page/tarixi_abideler/">Tarixi abidələr</a></li>
+                                            <li class="last">&gt; <a href="?/az/page/nakhchivan/">Fotoqalereya</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="searchdiv">
+                                        <h2>SAYT ÜZRƏ AXTARIŞ</h2>
+                                        <div>
+                                            <form action="?/az/search/" method="post" id="search_form">
+                                                <input type="text" id="forsearch" name="searchword" value=""><a href="#"
+                                                    title="Axtar" id="searcha"><span>Axtar</span></a>
+                                                <input type="submit" value="Axtar" id="search_submitter">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end nakhcevan -->
+                        </div>
+                        <!-- end rightpart -->
+                        <!-- leftpart -->
+                        <div id="leftpart">
+                            <!-- block1 -->
+                            <div id="block1">
+                                <h2>GƏLİŞ</h2>
+                                <table cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr bgcolor="#bbdeda">
+                                            <td width="61" height="22"> &nbsp; J2 251</td>
+                                            <td width="117"> &nbsp; Bakı</td>
+                                            <td width="73" align="center">08:20 / 07.04</td>
+                                        </tr>
+                                        <tr bgcolor="#cde7df">
+                                            <td width="61" height="22"> &nbsp; J2 2253</td>
+                                            <td width="117"> &nbsp; Bakı</td>
+                                            <td width="73" align="center">09:30 / 07.04</td>
+                                        </tr>
+                                        <tr bgcolor="#bbdeda">
+                                            <td width="61" height="22"> &nbsp; J2 253</td>
+                                            <td width="117"> &nbsp; Bakı</td>
+                                            <td width="73" align="center">13:10 / 07.04</td>
+                                        </tr>
+                                        <tr bgcolor="#cde7df">
+                                            <td width="61" height="22"> &nbsp; J2 255</td>
+                                            <td width="117"> &nbsp; Bakı</td>
+                                            <td width="73" align="center">18:00 / 07.04</td>
+                                        </tr>
+                                        <tr bgcolor="#bbdeda">
+                                            <td width="61" height="22"> &nbsp; J2 257</td>
+                                            <td width="117"> &nbsp; Bakı</td>
+                                            <td width="73" align="center">23:00 / 07.04</td>
+                                        </tr>
+                                        <tr bgcolor="#cde7df">
+                                            <td width="61" height="22"> &nbsp; J2 251</td>
+                                            <td width="117"> &nbsp; Bakı</td>
+                                            <td width="73" align="center">08:20 / 08.04</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end block1 -->
+                            <!-- block2 -->
+                            <div id="block2">
+                                <h2>UÇUŞ</h2>
+                                <table cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr bgcolor="#c6e2ef">
+                                            <td width="61" height="22"> &nbsp; J2 258</td>
+                                            <td width="117"> &nbsp; Bakı</td>
+                                            <td width="73" align="center">23:50 / 07.04</td>
+                                        </tr>
+                                        <tr bgcolor="#dcecf6">
+                                            <td width="61" height="22"> &nbsp; J2 252</td>
+                                            <td width="117"> &nbsp; Bakı</td>
+                                            <td width="73" align="center">09:10 / 07.04</td>
+                                        </tr>
+                                        <tr bgcolor="#c6e2ef">
+                                            <td width="61" height="22"> &nbsp; J2 254</td>
+                                            <td width="117"> &nbsp; Bakı</td>
+                                            <td width="73" align="center">14:00 / 07.04</td>
+                                        </tr>
+                                        <tr bgcolor="#dcecf6">
+                                            <td width="61" height="22"> &nbsp; J2 256</td>
+                                            <td width="117"> &nbsp; Bakı</td>
+                                            <td width="73" align="center">18:50 / 07.04</td>
+                                        </tr>
+                                        <tr bgcolor="#c6e2ef">
+                                            <td width="61" height="22"> &nbsp; J2 258</td>
+                                            <td width="117"> &nbsp; Bakı</td>
+                                            <td width="73" align="center">23:50 / 08.04</td>
+                                        </tr>
+                                        <tr bgcolor="#dcecf6">
+                                            <td width="61" height="22"> &nbsp; J2 252</td>
+                                            <td width="117"> &nbsp; Bakı</td>
+                                            <td width="73" align="center">09:10 / 08.04</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end block2 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <!-- bann1 -->
+                            <div id="bann1">
+                                <div class="gall">
+                                    <div id="mainbanner">
+                                        <img src="uploads/banners/mb3_1304658286.jpg" alt=""
+                                            style="position: absolute; top: 0px; left: 0px; display: none; z-index: 3; opacity: 0; width: 566px; height: 206px;"><a
+                                            href="http://www.airportnakhchivan.az/?/az/news/view/90/Moskva"
+                                            style="position: absolute; top: 0px; left: 0px; display: block; z-index: 3; opacity: 0.362404; width: 566px; height: 208px;"><img
+                                                src="uploads/banners/mb2_1304658277.jpg" alt=""></a><img
+                                            src="uploads/banners/mb1_1304658267.jpg" alt=""
+                                            style="position: absolute; top: 0px; left: 0px; display: block; z-index: 4; opacity: 0.636391; width: 566px; height: 206px;">
+                                    </div>
+                                    <div id="mainbannerpages"><a href="#" class=""><span>0</span></a><a href="#"
+                                            class=""><span>1</span></a><a href="#"
+                                            class="activeSlide"><span>2</span></a></div>
+                                </div>
+                            </div>
+                            <!-- end bann1 -->
+                            <!-- mainnews -->
+                            <div id="mainnews">
+                                <h2>XƏBƏRLƏR</h2>
+                                <a href="?/az/news/archive/" id="allnews">Bütün xəbərlər</a>
+                                <div class="clearleft">
+                                    <!--news-->
+                                    <div class="news">
+                                        <div class="content">
+                                            <h3>06.05.2021</h3>
+                                            <a href="?/az/news/view/91/Istanbul" title="Istanbul">
+                                                <address class="borderli"><span style="color: #000000;"><span
+                                                            style="font-weight: normal;"><em>İstanbul - Gəncə - Naxçıvan
+                                                                reysinin uçuş cədvəli</em></span></span></address>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="news">
+                                        <div class="content">
+                                            <h3>29.04.2021</h3>
+                                            <a href="?/az/news/view/90/Moskva" title="Moskva">
+                                                <address><span style="color: #000000;">Naxçıvan- Moskva reysi&nbsp;
+                                                        bərpa olunur</span></address>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="news">
+                                        <div class="content">
+                                            <h3>30.01.2019</h3>
+                                            <a href="?/az/news/view/86/Shahbuz_Aviakassasi" title="Şahbuz Aviakassası">
+                                                <h3>
+                                                    <p><em><img src="https://nuhcixan.az/" alt="">Şahbuz şəhərində yeni
+                                                            Aviakassa binası istifadəyə verilmişdir</em></p>
+                                                </h3>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--end news-->
+                                </div>
+                            </div>
+                            <!-- end mainnews -->
+                        </div>
+                        <!-- end leftpart -->
+                        <div class="clr"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="wrapper">
+                    <div class="right">
+                        Sayt <a href="http://www.dreamart.az/" target="_blank">Dream Art</a> şirkəti tərəfindən
+                        hazırlanıb ® 2011
+                    </div>
+                    <div class="left">
+                        Bütün hüquqlar qorunur © 2011 Naxçıvan Beynəlxalq Hava Limanı<br>
+
+                        <span class="goy">Bütün hüquqlar qorunur. İnformasiyanın istifadə olunması "</span>Naxçıvan
+                        Beynəlxalq Hava Limanı<span class="goy">" QSC-nin razılığı ilə edilə bilər.</span><br>
+
+                        <a href="?/az/sitemap/">Saytın xəritəsi</a> &nbsp; <span class="goy">|</span> &nbsp; <a
+                            href="?/az/page/contacts">Əlaqə məlumatları</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end center -->
+    </div>
+
+    <div id="ui-datepicker-div"
+        class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-helper-hidden-accessible">
+    </div>
+</body>
+
+</html>
