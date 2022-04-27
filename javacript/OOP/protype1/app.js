@@ -8,7 +8,7 @@
 //objevtden miras aliyor
 
 
-//buyuk avantaji prototiv kimi elave etmek olar
+//buyuk avantaji prototiv kimi elave etmek olar eyni motedu proto kimi elave etmek olar
 
 
 function Employee(name,age,salary)//buyuk harfli olmali
