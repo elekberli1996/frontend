@@ -6,7 +6,7 @@ function UI() {
 
 UI.prototype.addnewfilms = function (newFilm) {
 
-    films.innerHTML = `<tr>
+    films.innerHTML += `<tr>
                                             <td><img src="${newFilm.url}" class="img-fluid img-thumbnail"></td>
                                             <td>${newFilm.isim}</td>
                                             <td>${newFilm.yonetmen}</td>
@@ -32,3 +32,19 @@ UI.prototype.addalarm= function(type,message){
 
 
 }
+
+UI.prototype.butsil=function(){
+    const filmsall=document.querySelector("#films");
+    while(filmsall.firstElementChild="null")
+  
+    {
+  
+      filmsall.firstElementChild.remove();
+    }
+}
+
+
+
+
+
+
