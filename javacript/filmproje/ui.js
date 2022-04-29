@@ -1,16 +1,16 @@
-function UL (){
+function UL() {
 
 }
 
 
 
-UL.prototype.addFilm = function (Newfilm){
+UL.prototype.addFilm = function (Newfilm) {
 
     console.log();
 
     const film = document.querySelector("#films");
 
-    film.innerHTML +=`
+    film.innerHTML += `
     <tr>
                                             <td><img src="${Newfilm.url}" class="img-fluid img-thumbnail"></td>
                                             <td>${Newfilm.isim}</td>
@@ -20,3 +20,4 @@ UL.prototype.addFilm = function (Newfilm){
     
     `
 }
+
