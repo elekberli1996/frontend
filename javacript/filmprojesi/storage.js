@@ -54,7 +54,7 @@ LS.prototype.lssil=function(filmisim){
 
 LS.prototype.butunsil= function ()
 {
-    console.log("silindi");
+    
 localStorage.removeItem("film");
 }
 

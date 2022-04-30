@@ -13,6 +13,8 @@ const sil=document.querySelector("#clear-films");
 
 
 
+
+
 eventAdd();
 
 const ui=new UI();
@@ -67,6 +69,12 @@ films.forEach(film => {
 
 function filmekle(e){
 
+    
+
+
+/*console.log(isiminput.value);
+*/
+
 
     const isim = isiminput.value;
 
@@ -74,6 +82,21 @@ function filmekle(e){
 
     const url = urlinput.value;
 
+
+    
+
+
+let array=[]
+for (let i=0;i<films.children.length;i++){
+    array.push(films.children[i].children[1].textContent);
+
+}
+//console.log(array.includes(isim));
+
+if(array.includes(isim)===true){
+    ui.addalarm("danger","ayni film ekleyemezsiniz");
+}else{
+   
     if(isim=="" || yonetmen=="" || url=="")
     {
     
@@ -92,7 +115,6 @@ function filmekle(e){
         
     
     }
-
-
+}
     e.preventDefault();
 }
