@@ -1,80 +1,75 @@
-const form= document.querySelector("#film-form");
+const form = document.querySelector("#film-form");
 
-const isiminput=document.querySelector("#title");
+const isiminput = document.querySelector("#title");
 
-const yonetmeninput=document.querySelector("#director");
+const yonetmeninput = document.querySelector("#director");
 
-const urlinput=document.querySelector("#url");
+const urlinput = document.querySelector("#url");
 
-const cardbody =document.querySelectorAll(".card-body")[1];
+const cardbody = document.querySelectorAll(".card-body")[1];
 
-const sil=document.querySelector("#clear-films");
+const sil = document.querySelector("#clear-films");
 
-
-
+const filmara=document.querySelector("#filmara");
 
 
 
 eventAdd();
 
-const ui=new UI();
+const ui = new UI();
 
-const ls=new LS();
+const ls = new LS();
 
-
-
-
-
-
-
-
-
-function eventAdd()
-{
- form.addEventListener("submit",filmekle);
- document.addEventListener("DOMContentLoaded",loadfilms);
-cardbody.addEventListener("click",silme);
-sil.addEventListener("click",hepsinsil);
+function eventAdd() {
+    form.addEventListener("submit", filmekle);
+    document.addEventListener("DOMContentLoaded", loadfilms);
+    cardbody.addEventListener("click", silme);
+    sil.addEventListener("click", hepsinsil);
+    filmara.addEventListener("keyup",filmarama);
 
 
 }
-function hepsinsil(){
-    ls.butunsil();
-    ui.butsil();
- 
-}
+    function filmarama(){
 
-
-function silme(e){
- if(e.target.className==="btn btn-danger"){
+        ui.filmarama();
    
-   ls.lssil(e.target.parentElement.parentElement.children[1].textContent);
-  e.target.parentElement.parentElement.remove();
-      
- }
+
+}
+
+
+
+
+function hepsinsil() {
+    if (confirm("tum filmleri silmek icin eminmisiniz?") === true) {
+        ls.butunsil();
+        ui.butsil();
+    } 
+}
+
+
+function silme(e) {
+    if (e.target.className === "btn btn-danger") {
+
+        ls.lssil(e.target);
+        ui.uisil(e.target);
+        //e.target.parentElement.parentElement.remove();
+        //console.log(e.target.parentElement.previousElementSibling.previousElementSibling.textContent);
+
+    }
+
+}
+
+
+function loadfilms() {
+    const films = ls.getstorageitem();
+    ui.load(films);
    
 }
 
 
 
 
-function loadfilms(){
-const films=ls.getstorageitem();
-films.forEach(film => {
-    ui.addnewfilms( film);
-});
-}
-
-
-
-function filmekle(e){
-
-    
-
-
-/*console.log(isiminput.value);
-*/
-
+function filmekle(e) {
 
     const isim = isiminput.value;
 
@@ -83,38 +78,38 @@ function filmekle(e){
     const url = urlinput.value;
 
 
+    const array=ui.arrayal();
+
     
 
 
-let array=[]
-for (let i=0;i<films.children.length;i++){
-    array.push(films.children[i].children[1].textContent);
+    if (array.includes(isim) === true) {
+        ui.addalarm("danger", "ayni film ekleyemezsiniz");
+    } else {
 
-}
-//console.log(array.includes(isim));
+        if (isim == "" || yonetmen == "" || url == "") {
 
-if(array.includes(isim)===true){
-    ui.addalarm("danger","ayni film ekleyemezsiniz");
-}else{
-   
-    if(isim=="" || yonetmen=="" || url=="")
-    {
-    
-        ui.addalarm("danger","tum bosluklari doldurun");
-      
+            ui.addalarm("danger", "tum bosluklari doldurun");
+
+        } else {
+
+            const newFilm = new Film(isim, yonetmen, url);
+
+            ui.addnewfilms(newFilm);
+            ui.addalarm("success", "film basariyla eklendi");
+            ls.lsadd(newFilm);
+
+
+        }
     }
-
-    else
-    {
-     
-        const newFilm =new Film(isim,yonetmen,url);
-        
-        ui.addnewfilms(newFilm);
-        ui.addalarm("success","film basariyla eklendi");
-        ls.lsadd(newFilm);
-        
-    
-    }
-}
     e.preventDefault();
 }
+
+
+
+
+
+
+
+
+
