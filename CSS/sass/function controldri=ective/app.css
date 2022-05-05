@@ -1,0 +1,58 @@
+body {
+  background-color: aqua;
+}
+
+h1 {
+  font-size: 5px;
+  color: #0f2141;
+}
+
+h2 {
+  font-size: 10px;
+  color: #1e4282;
+}
+
+h3 {
+  font-size: 15px;
+  color: #2d63c3;
+}
+
+h4 {
+  font-size: 20px;
+  color: #3c84ff;
+}
+
+h5 {
+  font-size: 25px;
+  color: #4ba5ff;
+}
+
+h6 {
+  font-size: 30px;
+  color: #5ac6ff;
+}
+
+div1 {
+  background-color: #1464fa;
+}
+
+div2 {
+  background-color: #1878ff;
+}
+
+div3 {
+  background-color: #1c8cff;
+}
+
+div4 {
+  background-color: #20a0ff;
+}
+
+div5 {
+  background-color: #24b4ff;
+}
+
+div6 {
+  background-color: #28c8ff;
+}
+/*# sourceMappingURL=app.css.map */

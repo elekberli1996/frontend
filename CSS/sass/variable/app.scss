@@ -1,0 +1,79 @@
+$ana-renk: bisque;
+$header:green;
+$kutu:#7d5fff;
+$cerceve: yellow;
+@mixin border($gen,$tip,$reng){
+    border-width: $gen;
+    border-color: $reng;
+    border-style: $tip;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 30px;
+}
+.kutu{  //ekstend
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+    float: left;
+    margin-right: 10px;
+
+}
+
+body {
+    background-color: $ana-renk;
+
+    .container {
+        height: 1000px;
+        width: 450px;
+        margin: auto;
+        background-color: $cerceve;
+
+        header {
+            height: 50px;
+            width: 900px;
+            background-color: $header;
+
+            ul {
+                li {
+                    float: left;
+
+                    a {
+                        display: block;
+                        height: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                        width: 150px;
+                        text-decoration: none;
+                        font-size: 24px;
+                        color: $kutu;
+                        &:hover{
+                            color: $cerceve;
+                        }
+                    }
+                }
+            }
+     
+        }
+
+.kutular{
+    height: 500px;
+    width: 700px;
+    margin: 50px;
+    background-color: $kutu;
+    .box1{
+        @extend.kutu;
+        @include border(5px,solid , red);
+    }
+    .box2{
+        @extend.kutu;
+
+    }
+
+}
+
+    }
+
+}

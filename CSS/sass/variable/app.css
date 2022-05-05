@@ -1,0 +1,64 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-size: 30px;
+}
+
+.kutu, body .container .kutular .box1, body .container .kutular .box2 {
+  height: 200px;
+  width: 200px;
+  background-color: aqua;
+  float: left;
+  margin-right: 10px;
+}
+
+body {
+  background-color: bisque;
+}
+
+body .container {
+  height: 1000px;
+  width: 450px;
+  margin: auto;
+  background-color: yellow;
+}
+
+body .container header {
+  height: 50px;
+  width: 900px;
+  background-color: green;
+}
+
+body .container header ul li {
+  float: left;
+}
+
+body .container header ul li a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: 150px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #7d5fff;
+}
+
+body .container header ul li a:hover {
+  color: yellow;
+}
+
+body .container .kutular {
+  height: 500px;
+  width: 700px;
+  margin: 50px;
+  background-color: #7d5fff;
+}
+
+body .container .kutular .box1 {
+  border-width: 5px;
+  border-color: red;
+  border-style: solid;
+}
+/*# sourceMappingURL=app.css.map */
