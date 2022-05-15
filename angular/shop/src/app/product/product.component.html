@@ -1,0 +1,29 @@
+<h3 *ngIf="products; else noProduct">{{title}}</h3>
+<div class="form-group">
+
+  <input  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+    placeholder="Product arayiniz"
+    [(ngModel)]="filterText">
+  <small *ngIf="filterText" id="emailHelp" class="form-text text-muted">aranan product <strong> {{filterText}}</strong></small>
+</div>
+
+
+<div class="row">
+  <ng-template #noProduct>
+
+    <div class="alert alert-success">
+      <strong>heyyyy!</strong> bu katagoryde urun yok
+    </div>
+  </ng-template>
+  <div *ngFor="let product of products | productFilter:filterText " class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="product.imageUrl" alt="Card image cap">
+    <div class="card-body">
+
+      <h5 class="card-title">{{product.name | lowercase }} {{product.fiyat | currency :'AZN'}} </h5>
+      <p class="card-text">{{product.description}}</p>
+      <a (click)="addtoCard(product)" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+</div>
+

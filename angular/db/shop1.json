@@ -1,0 +1,26 @@
+ {
+
+
+"catagories":[
+{"id":1,"name":"bilgisayar"},
+{"id":2,"name":"elektronik"},
+{"id":1,"name":"bilgisayar"},
+{"id":2,"name":"elektronik"},
+{"id":1,"name":"bilgisayar"},
+{"id":2,"name":"elektronik"}
+],
+
+
+    "product":[
+        {"id":1,"name":"leptap","fiyat":2500,"catagorid":1,"description":"misal",
+            "imageUrl":"https://media.istockphoto.com/photos/man-viewing-graphics-with-a-leptop-from-the-bed-picture-id1296116243?s=612x612"},
+            {"id":2,"name":"mause","fiyat":25,"catagorid":2,"description":"misal",
+                "imageUrl":"https://media.istockphoto.com/photos/man-viewing-graphics-with-a-leptop-from-the-bed-picture-id1296116243?s=612x612"}
+    
+            ]
+}
+    
+
+
+
+

@@ -1,0 +1,28 @@
+git init proje olusturmak
+pwd unvan
+cd proje getmek
+clear terminali temizle
+cd .. geri
+git add. butun hamsin elave edir
+git add gecici bolgeye atar
+git commit -m tesdiq
+git log butun versiyonlari gosterir
+git status 
+git diff syafalardaki deyisiklikleri gosterir
+git diff --staged
+git rm silme islrmi
+git rm -r dosyanin hamisin siler
+git mv ad deisdirme yer deisme
+git checkout -- dosya adi silineni geri qaytarma
+git reste HEAD dosya adi gecis bolgesinden geri alma
+git checkout versiyon kodu(ilk 8 reqem) -- . versyon deisdirme
+git remote add githubRepo uzaq adress uzaq baglanti qurma
+git remote baglanti yoxlamaq
+git push -u githubRepo master githuba gonderme
+istifadeci
+parol
+git pull githubdan dosya almaq
+git brach  dallari gosterir
+git branch --all uzq baglanti ile dallari gosterir
+git branch ad yrnni dal yaratir
+git checkout ad yandal secir
